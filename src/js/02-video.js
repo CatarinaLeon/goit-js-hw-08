@@ -7,7 +7,7 @@ const player = new Player(iframe);
 const KEY = "videoplayer-current-time";
 
 const onPlay = function(data) {
-    localStorage.setItem('videoplayer-current-time', data.seconds);
+    localStorage.setItem(KEY, data.seconds);
 };
 
 player.on('play', throttle(onPlay, 1000));
